@@ -1,3 +1,12 @@
+//import styles from "./index.module.scss";
+import "./shared/styles/styles.scss";
+
+
+
+
+
+
+
 export const App = () => {
   return (
     <div
