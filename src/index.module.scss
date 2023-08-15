@@ -1,16 +1,36 @@
-.wrapper {
-  padding: 20px 0;
-}
-
-.title {
-  text-align: center;
+.heading {
+  font-size: 20px;
   font-weight: bold;
-  font-size: 19px;
-  margin-bottom: 25px;
-  color: rgb(12, 91, 250);
+  margin: 25px 0;
+  text-align: center;
 }
 
-.blocks {
-  display: block;
-  gap: 20px;
+.list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.item {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 15px;
+
+  &Title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+    color: blueviolet
+
+  }
+
+  &Text {
+    font-size: 17px;
+  }
+}
+
+.error {
+  color: red;
+  margin-bottom: 25px;
 }
