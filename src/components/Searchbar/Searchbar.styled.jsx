@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Header = styled.header`
   top: 0;
@@ -14,7 +14,7 @@ export const Header = styled.header`
   padding-top: 12px;
   padding-bottom: 12px;
   color: #fff;
-  background-color: #5ac8fa;
+  background-color: #3f51b5;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
@@ -27,7 +27,6 @@ export const SearchForm = styled.form`
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
-  box-shadow: #5856d6 1px 1px 3px inset, rgb(255, 255, 255) -1px -1px 5px inset;
 `;
 
 export const SearchFormBtn = styled.button`

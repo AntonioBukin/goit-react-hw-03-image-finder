@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { toast } from 'react-toastify';
-import {FcSearch} from "react-icons/fc";
+import {AiOutlineSearch} from "react-icons/ai";
 import {
   Header,
   SearchForm,
@@ -37,6 +37,9 @@ class Searchbar extends Component {
     this.props.onSubmit(inputValue);
     this.clearForm();
   };
+  clearForm = () => {
+    this.setState({inputValue: ""});
+  };
 
   render() {
     const { inputValue } = this.state;
@@ -44,13 +47,13 @@ class Searchbar extends Component {
       <Header>
         <SearchForm onSubmit={this.handleSubmit}>
           <SearchFormBtn type="submit">
-            <FcSearch size="32" />
+            <AiOutlineSearch size="30" />
           </SearchFormBtn>
           <SearchFormInput
             type="text"
-            autoCoplete="off"
+            autoComplete="off"
             autoFocus
-            placeholder="Looking for foto and images"
+            placeholder="All search images and fotos"
             value={inputValue}
             onChange={this.handleChange}
           />
