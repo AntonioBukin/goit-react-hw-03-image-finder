@@ -6,7 +6,7 @@ import ImageGallery from './ImageGallery/ImageGallery';
 import Loader from './Loader/Loader';
 import Modal from './Modal/Modal';
 import { ToastContainer, Slide, toast } from 'react-toastify';
-import * as API from '../shared/api/posts';
+import * as API from '../api/posts';
 import 'react-toastify/dist/ReactToastify.css';
 
 class Posts extends Component {
@@ -23,7 +23,7 @@ class Posts extends Component {
 
   componentDidUpdate(_, { query, page }) {
     if (page !== this.state.page || query !== this.state.query) {
-      this.fetchPosts(this.state.page, this.state.query);
+      this.fetchPosts();
     }
   }
 
@@ -44,7 +44,8 @@ class Posts extends Component {
     }));
   };
 
-  fetchPosts = async (query, page) => {
+  fetchPosts = async () => {
+    const { query, page } = this.state;
     try {
       this.setState({ isLoading: true });
       const { images, totalHits } = await API.postImage(query, page);
